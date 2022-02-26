@@ -9,6 +9,7 @@
 # D             500
 # M             1000
 #
+# Example:
 # Input: s = "LVIII"
 # Output: 58
 # Explanation: L = 50, V= 5, III = 3.
@@ -26,12 +27,12 @@ class Solution:
         }
         
         result = 0
-        curr = 0
+        prev = 0
         
-        for i in s:
-            if dict[i] < curr:
-                result -= dict[i]
-            if dict[i] >= curr:
+        for i in reversed(s):
+            if dict[i] >= prev:
                 result += dict[i]
-            curr = dict[i]
+            if dict[i] < prev:
+                result -= dict[i]
+            prev = dict[i]
         return result
