@@ -17,12 +17,10 @@ class Solution:
         if x == 0: return 0
         if x > 0:
             rev = int(str(x)[::-1])
-            if rev > 2147483647:
-                return 0
+            if rev > 2147483647: return 0
             return rev
         if x < 0:
             x *= -1
             rev = int(str(x)[::-1]) * -1
-            if rev < -2147483648:
-                return 0
+            if rev < -2147483648: return 0
             return rev
