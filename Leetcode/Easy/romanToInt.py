@@ -1,5 +1,5 @@
 # Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
-#
+
 # Symbol       Value
 # I             1
 # V             5
@@ -8,7 +8,7 @@
 # C             100
 # D             500
 # M             1000
-#
+
 # Example:
 # Input: s = "LVIII"
 # Output: 58
